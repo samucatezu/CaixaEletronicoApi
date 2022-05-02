@@ -1,5 +1,6 @@
 package com.example.caixaeletronicoapi.model;
 
+import com.example.caixaeletronicoapi.BusinessException;
 import lombok.*;
 
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(uniqueConstraints=@UniqueConstraint(columnNames = { "agency","accountNumber" }))
-public class BankDataModel extends AbstractModel{
+public class BankData extends AbstractModel{
 
     private static final long serialVersionUID = 61971462715115176L;
 
