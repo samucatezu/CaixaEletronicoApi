@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/atm")
+@RequestMapping("/api")
 public class ATMController {
 	
 	@Autowired
