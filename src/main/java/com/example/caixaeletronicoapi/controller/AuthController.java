@@ -1,5 +1,11 @@
 package com.example.caixaeletronicoapi.controller;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import javax.validation.Valid;
 
 import com.example.caixaeletronicoapi.model.ERole;
 import com.example.caixaeletronicoapi.model.Role;
@@ -10,7 +16,6 @@ import com.example.caixaeletronicoapi.payload.response.MessageResponse;
 import com.example.caixaeletronicoapi.payload.response.UserInfoResponse;
 import com.example.caixaeletronicoapi.repository.RoleRepository;
 import com.example.caixaeletronicoapi.repository.UserRepository;
-
 import com.example.caixaeletronicoapi.security.jwt.JwtUtils;
 import com.example.caixaeletronicoapi.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +27,13 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
+
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
