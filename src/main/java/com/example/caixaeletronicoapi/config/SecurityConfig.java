@@ -50,10 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/api/seeCash/**").hasAnyRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/api/addCash/{bankNote}/{amount}").hasAnyRole("ADMIN", "USER")
+                .antMatchers(HttpMethod.GET, "/api/seeCash/**").hasAnyRole("USER")
                 .antMatchers(HttpMethod.POST, "/api/starters", "/api/categoria", "/api/upload/**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/api/starters/**", "/api/categoria/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/usuarios/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
