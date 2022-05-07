@@ -5,17 +5,15 @@ import com.example.caixaeletronicoapi.model.Cedula;
 import com.example.caixaeletronicoapi.model.dto.CedulaDTO;
 import com.example.caixaeletronicoapi.tipo.TipoNota;
 import com.example.caixaeletronicoapi.error.ValorIndisponivelException;
+
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.jayway.jsonpath.internal.path.PathCompiler.fail;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 
 public class SaqueServiceTest {
@@ -29,10 +27,7 @@ public class SaqueServiceTest {
         service = new SaqueService(dispenserService);
     }
 
-    @Test
-    public void testarSenha(){
-        assertEquals();
-    }
+
 
     @Test
     public void deveRetornarUmaNotaDeDezUmaDeVinteUmaDeCinquentaEDuasDeCemComSucesso() {
