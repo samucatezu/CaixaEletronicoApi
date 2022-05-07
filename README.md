@@ -26,7 +26,7 @@ Ferramentas utilizadas:
 
 - Clone-o
 - Abra em uma IDE que suporte Spring Boot
-- Defina o username e a password do seu User Mysql
+- Defina o username e a password do seu User Mysql no application.properties
 - Rode o projeto
 - digite o endereco do swagger no seu navegador http://localhost:8080/swagger-ui.html#
 - Crie um usuario(recomendo que defina admin como false para testar os saques)
